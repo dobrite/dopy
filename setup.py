@@ -6,6 +6,10 @@ try:
 except ImportError:
     from distutils.core import setup
 
+entry_point = """\
+[console_scripts]
+do = dopy.manager:main
+"""
 
 setup(
     name='dopy',
@@ -15,4 +19,5 @@ setup(
     packages=['dopy'],
     license='MIT',
     install_requires=["requests >= 1.0.4"],
+    entry_points=entry_point,
 )

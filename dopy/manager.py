@@ -260,7 +260,8 @@ class DoManager(object):
 
         return json
 
-if __name__=='__main__':
+
+def main():
     import os
     client_id = os.environ['DO_CLIENT_ID']
     api_key = os.environ['DO_API_KEY']
@@ -270,3 +271,7 @@ if __name__=='__main__':
     import pprint
     # size_id: 66, image_id: 1601, region_id: 1
     pprint.pprint(getattr(do, fname)(*sys.argv[2:]))
+
+
+if __name__=='__main__':
+    main()
